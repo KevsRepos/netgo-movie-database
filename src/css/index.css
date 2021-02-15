@@ -1,0 +1,305 @@
+:root {
+  --mainShadow: 0 0 3px 3px #aaaaaa;
+  --mainPadding: 15px;
+  --viewWidth: 65vw;
+}
+* {
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: #000000;
+}
+body {
+  margin: 0;
+  background-color: #eeeeee;
+  font-size: 1.5em;
+}
+main {
+  margin-top: 100px;
+}
+input[type="submit"]:hover, button:hover {
+  cursor: pointer;
+}
+h2 {
+  text-align: center;
+}
+header {
+  z-index: 9999;
+  position: fixed;
+  top: 0px;
+  width: 100vw;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: var(--mainShadow);
+}
+header button {
+  box-shadow: none;
+}
+header .rightBtnsHeader {
+  display: flex;
+  align-items: center;
+  margin-right: 15px;
+}
+header .searchInput {
+  margin-right: 10px;
+  width: 50vw;
+}
+.suggestions {
+  width: 50%;
+  position: fixed;
+  top: 57px;
+  background-color: #ffffff;
+  box-shadow: var(--mainShadow);
+}
+.suggestions a, .searchResults a  {
+  display: block;
+}
+.searchResults {
+  width: var(--viewWidth);
+  margin-left: auto;
+  margin-right: auto;
+}
+.searchResults a {
+  background-color: #ffffff;
+  box-shadow: var(--mainShadow);
+}
+a, button {
+  text-decoration: none;
+  padding: var(--mainPadding);
+}
+a:hover {
+  text-decoration: underline;
+}
+input, button, textarea, .btnAppearence {
+  background-color: #ffffff;
+  border: none;
+  box-shadow: var(--mainShadow);
+  padding: var(--mainPadding);
+  box-sizing: border-box;
+}
+button {
+  font-size: 1rem;
+}
+button:hover {
+  background-color: rgba(238, 238, 238, 0.7);
+}
+.fieldsFlex {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: var(--mainPadding);
+  width: var(--viewWidth);
+  margin: 0 auto;
+}
+.listingField {
+  position: relative;
+  margin: 20px;
+  height: 300px;
+  width: 300px;
+  background-color: #ffffff;
+  box-shadow: var(--mainShadow);
+}
+.fieldTitle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.listingField:hover {
+  transition: 0.25s;
+  transform: translateY(-10px);
+}
+.title, .descriptionCont, .flexedMetaCont {
+  width: 100%;
+  box-sizing: border-box;
+  margin: 5px 0 30px 0;
+  background-color: #ffffff;
+  box-shadow: var(--mainShadow);
+  
+}
+.flexedMetaCont {
+  z-index: 9;
+  display: flex;
+  flex-direction: column;
+  padding: var(--mainPadding);
+}
+.flexedMetaCont label {
+  display: flex;
+  justify-content: space-between;
+}
+
+.movieCont, .profileWrapper, .favoritesWrapper {
+  margin: auto;
+  width: var(--viewWidth);
+}
+.flexedMetaCont span {
+  padding: 10px;
+  padding-left: 0px;
+  line-height: 0%;
+}
+.movieCont label, .profileWrapper label {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.descriptionCont {
+  min-height: 350px;
+  resize: vertical;
+  padding: var(--mainPadding);
+}
+.dataInputs {
+  padding: 5px;
+  width: 50%;
+}
+
+.centered {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.accountForms {
+  background-color: #ffffff;
+  padding: var(--mainPadding);
+  box-shadow: var(--mainShadow);
+  width: 30vw;
+  margin: auto;
+}
+.accountForms form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.accountForms form span {
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+.switchFormBtn {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 20px;
+}
+.editBtns {
+  display: flex;
+  justify-content: center;
+  position: initial;
+}
+.editBtns button {
+  margin: 0 5px 0 5px;
+  min-width: 100px;
+}
+.menu {
+  position: fixed;
+  min-width: 250px;
+  min-height: 350px;
+  top: 62px;
+  right: 5px;
+  background-color: #ffffff;
+  box-shadow: var(--mainShadow);
+  display: flex;
+  flex-direction: column;
+}
+.menu a {
+  border-bottom: 1px solid #eeeeee;
+}
+.logOutBtn {
+  display: block;
+  width: 100%;
+  border: 1px solid #eeeeee;
+  margin: 0px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  position: absolute;
+  bottom: 0px;
+}
+.listLink {
+  display: block;
+}
+.outerWrapper {
+  position: fixed;
+  top: 0vh;
+  left: 0vw;
+  width: 100vw;
+  height: 100vh;
+  padding: 10px;
+  background-color: rgba(137, 137, 137, 0.8);
+}
+.confirmCont {
+  position: fixed;
+  top: 50vh;
+  left: 50vw;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #ffffff;
+  box-shadow: var(--mainShadow);
+  text-align: center;
+}
+.confirmCont span {
+  margin-bottom: 30px;
+}
+.confirmCont button {
+  margin: 10px 0px 10px 0px;
+}
+
+@media screen and (max-width: 1200px) {
+  :root {
+    --viewWidth: 85vw;
+  }
+  .accountForms {
+    width: 65vw;
+  }
+}
+@media screen and (max-width: 900px) {
+  .listingField {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  :root {
+    --viewWidth: 95vw;
+  }
+  .confirmCont {
+    width: 95vw;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .fieldsFlex {
+   padding: 0px;
+  }
+  .listingField {
+    width: 95vw;
+    height: 200px;
+  }
+  header .searchInput, .suggestions {
+    position: fixed;
+    top: 62px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 95vw;
+    margin: auto;
+  }
+  .suggestions {
+    top: 112px;
+  }
+  .accountForms {
+    width: 85vw;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .listingField {
+    width: 130px;
+    height: 130px;
+  }
+  .fieldMeta {
+    display: none;
+  }
+}
