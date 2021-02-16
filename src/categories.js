@@ -23,7 +23,7 @@ const Categories = () => {
           categories ? categories.map(values => <Link className="listingField" key={values.categoryId} to={`/Categories/${values.category}`}><span className="fieldTitle">{values.category}</span></Link>) :
           <>
           <h2>Leider gibt es noch keine Kategorien!</h2>
-          <span className="centered"><Link className="btnAppearence" to="/Add/">Erstem Film hinzufügen</Link></span>
+          <span className="centered"><Link className="btnAppearence" to="/Add/">Ersten Film hinzufügen</Link></span>
           </>
         }
       </div>

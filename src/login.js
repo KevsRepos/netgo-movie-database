@@ -65,14 +65,14 @@ const Register = () => {
     <h2>Registrieren</h2>
     <form onSubmit={e => registerUser(e)}>
       <span className="topInputPlaceholder">Email</span>
-      <input value={email} onChange={e => setEmail(e.target.value)} type="email" name="email" required/>
+      <input placeholder="..." value={email} onChange={e => setEmail(e.target.value)} type="email" name="email" required/>
       <span className="topInputPlaceholder">Vorname</span>
-      <input value={firstName} onChange={e => setFirstName(e.target.value)} type="text" name="name" required/>
+      <input placeholder="..." value={firstName} onChange={e => setFirstName(e.target.value)} type="text" name="name" required/>
       <span className="topInputPlaceholder">Nachname</span>
-      <input value={surname} onChange={e => setSurname(e.target.value)} type="text" name="surname" required/>
+      <input placeholder="..." value={surname} onChange={e => setSurname(e.target.value)} type="text" name="surname" required/>
       <PasswordInputs passwordRef={passwordRef} onStateChange={setPasswordsMatch}  />
       <ErrMsg message={msg} />
-      <input type="submit" value="Registrieren" />
+      <button type="submit">Registrieren</button>
     </form>
     </>
   )
@@ -138,7 +138,7 @@ const Login = () => {
       <span className="topInputPlaceholder">Passwort</span>
       <input placeholder="..." value={password} onChange={e => setPassword(e.target.value)} type="password" name="password" required/>
       <ErrMsg message={msg} />
-      <input type="submit" value="Einloggen" />
+      <button type="submit">Einloggen</button>
     </form>
     </>
   )
