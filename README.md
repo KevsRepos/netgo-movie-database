@@ -1,4 +1,5 @@
 #######
+
 **Diese Website habe ich im Zuge eines Bewerbungsprozesses für eine Ausbildung als Anwendungsentwickler gebaut.**
 
 Das gesamte Repo umfasst den development build, den production build, sowie das Backend und die dazu gehörige Datenbankstruktur.
