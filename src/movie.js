@@ -28,7 +28,6 @@ const MovieCont = () => {
   const updateMovie = e => {
     e.preventDefault();
 
-    console.log(movieData);
     fetchAPI('editMovie', {
       movieId: movieData.movieId,
       toUpdate: {

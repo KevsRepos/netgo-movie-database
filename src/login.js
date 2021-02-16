@@ -107,6 +107,7 @@ const PasswordInputs = props => {
 }
 
 const Login = () => {
+  const history = useHistory();
   const {toggleToken} = useContext(t);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -122,6 +123,7 @@ const Login = () => {
       if(data.success === false) {
         setMsg(data.return);
       }else {
+        history.push('/');
         toggleToken(data.return);
       }
     });

@@ -11,7 +11,6 @@ const Favorites = () => {
       fetchAPI('getFavorites').then(data => {
         if(data.success) {
           setFavorites(data.return);
-          console.log(data.return);
         }else {
           setFavorites(false);
         }
@@ -27,7 +26,6 @@ const Favorites = () => {
     }
   }, [userId]);
 
-  console.log(favorites);
   if(favorites) {
     return(
       <main>
