@@ -63,7 +63,7 @@ const Register = () => {
   return(
     <>
     <h2>Registrieren</h2>
-    <form>
+    <form onSubmit={e => registerUser(e)}>
       <span className="topInputPlaceholder">Email</span>
       <input value={email} onChange={e => setEmail(e.target.value)} type="email" name="email" required/>
       <span className="topInputPlaceholder">Vorname</span>
@@ -72,7 +72,7 @@ const Register = () => {
       <input value={surname} onChange={e => setSurname(e.target.value)} type="text" name="surname" required/>
       <PasswordInputs passwordRef={passwordRef} onStateChange={setPasswordsMatch}  />
       <ErrMsg message={msg} />
-      <input type="submit" value="Registrieren" onClick={e => registerUser(e)} />
+      <input type="submit" value="Registrieren" />
     </form>
     </>
   )
@@ -132,13 +132,13 @@ const Login = () => {
   return(
     <>
     <h2>Einloggen</h2>
-    <form>
+    <form onSubmit={e => loginUser(e)}>
       <span className="topInputPlaceholder">Email</span>
       <input placeholder="..." value={email} onChange={e => setEmail(e.target.value)} type="email" name="email" required/>
       <span className="topInputPlaceholder">Passwort</span>
       <input placeholder="..." value={password} onChange={e => setPassword(e.target.value)} type="password" name="password" required/>
       <ErrMsg message={msg} />
-      <input type="submit" value="Einloggen" onClick={e => loginUser(e)} />
+      <input type="submit" value="Einloggen" />
     </form>
     </>
   )
